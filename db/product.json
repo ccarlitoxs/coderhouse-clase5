@@ -1,0 +1,42 @@
+[
+  {
+    "product": {
+      "id": 1,
+      "name": "asd",
+      "price": "123",
+      "url": "qwe"
+    }
+  },
+  {
+    "product": {
+      "id": 2,
+      "name": "",
+      "price": "",
+      "url": ""
+    }
+  },
+  {
+    "product": {
+      "id": 3,
+      "name": "",
+      "price": "",
+      "url": ""
+    }
+  },
+  {
+    "product": {
+      "id": 4,
+      "name": "",
+      "price": "",
+      "url": ""
+    }
+  },
+  {
+    "product": {
+      "id": 5,
+      "name": "",
+      "price": "",
+      "url": ""
+    }
+  }
+]

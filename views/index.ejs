@@ -1,0 +1,52 @@
+<% include partials/_header %>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-7">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <td>n°</td>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Photo</td>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (dataJson) { %>
+            <% for(var i = 0; i < dataJson.length; i++) { %>
+              <tr>
+                <td><%= (i + 1) %></td>
+                <td><%= dataJson[i].product.name %></td>
+                <td>$<%= dataJson[i].product.price %></td>
+                <td><img src=<%= dataJson[i].product.url %> class="modal-content container-sm w-25 p-3" ></td>
+              </tr>
+            <% } %>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-5">
+      <div class="card-body">
+
+        <form action="/productos" method="POST">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Name" class="form-control" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="number" name="price" placeholder="Price" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="url" placeholder="URL photo" class="form-control">
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            Guardar
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% include partials/_footer %>
